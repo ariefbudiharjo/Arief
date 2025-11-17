@@ -2,57 +2,145 @@
 <html lang="id">
 <head>
 <meta charset="UTF-8">
-<title>Data Login</title>
+<title>Daftar Nama Data</title>
 <style>
-  body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    margin-top: 100px;
-    background-color: #f9fafb;
-    color: #333;
-  }
-  h2 {
-    margin-bottom: 5px;
-  }
-  .info {
-    font-size: 18px;
-    margin-bottom: 10px;
-  }
-  button {
-    padding: 10px 20px;
-    margin-bottom: 30px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 8px;
-    border: none;
-    background-color: #2563eb;
-    color: white;
-    transition: background 0.3s;
-  }
-  button:hover {
-    background-color: #1e40af;
-  }
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f5f6f8;
+        padding: 40px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .container {
+        max-width: 1100px;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 35px;
+    }
+
+    .card {
+        background: white;
+        padding: 25px;
+        border-radius: 12px;
+        text-align: center;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+
+    h3 {
+        margin-top: 0;
+        font-size: 22px;
+        font-weight: bold;
+        color: #333;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 15px;
+        cursor: pointer;
+        border: none;
+        border-radius: 8px;
+        background-color: #2563eb;
+        color: white;
+        margin-top: 10px;
+        transition: 0.3s;
+    }
+
+    button:hover {
+        background-color: #1e40af;
+    }
+
+    .hidden {
+        display: none;
+    }
 </style>
 </head>
+
 <body>
-  <h2>Data Login</h2>
+<div class="container">
 
-  <div class="info">
-    <p><strong>NIP:</strong> <span id="nip">199405022020121006</span></p>
-    <button onclick="copyText('nip')">📋 Copy NIP</button>
-  </div>
+    <!-- CARD 1 -->
+    <div class="card">
+        <h3>AB</h3>
+        <span id="nip1" class="hidden">199405022020121006</span>
+        <span id="pass1" class="hidden">qwerty213456</span>
+        <button onclick="copyText('nip1')">Copy NIP</button><br>
+        <button onclick="copyText('pass1')">Copy Password</button>
+    </div>
 
-  <div class="info">
-    <p><strong>Password:</strong> <span id="password">qwerty213456</span></p>
-    <button onclick="copyText('password')">📋 Copy Password</button>
-  </div>
+    <!-- CARD 2 -->
+    <div class="card">
+        <h3>HS</h3>
+        <span id="nip2" class="hidden">198211102014091004</span>
+        <span id="pass2" class="hidden">198211102014091004a</span>
+        <button onclick="copyText('nip2')">Copy NIP</button><br>
+        <button onclick="copyText('pass2')">Copy Password</button>
+    </div>
 
-  <script>
-    function copyText(id) {
-      const text = document.getElementById(id).textContent;
-      navigator.clipboard.writeText(text);
-      alert(id.charAt(0).toUpperCase() + id.slice(1) + " berhasil disalin!");
-    }
-  </script>
+    <!-- CARD 3 -->
+    <div class="card">
+        <h3>YA</h3>
+        <span id="nip3" class="hidden">199606142025212098</span>
+        <span id="pass3" class="hidden">y</span>
+        <button onclick="copyText('nip3')">Copy NIP</button><br>
+        <button onclick="copyText('pass3')">Copy Password</button>
+    </div>
+
+    <!-- CARD 4 -->
+    <div class="card">
+        <h3>AN</h3>
+        <span id="nip4" class="hidden">199706222022032026</span>
+        <span id="pass4" class="hidden">annisa1</span>
+        <button onclick="copyText('nip4')">Copy NIP</button><br>
+        <button onclick="copyText('pass4')">Copy Password</button>
+    </div>
+
+    <!-- CARD 5 -->
+    <div class="card">
+        <h3>WL</h3>
+        <span id="nip5" class="hidden">199308272022032018</span>
+        <span id="pass5" class="hidden">123456</span>
+        <button onclick="copyText('nip5')">Copy NIP</button><br>
+        <button onclick="copyText('pass5')">Copy Password</button>
+    </div>
+
+    <!-- CARD 6 -->
+    <div class="card">
+        <h3>PT</h3>
+        <span id="nip6" class="hidden">199402042025212083</span>
+        <span id="pass6" class="hidden">29</span>
+        <button onclick="copyText('nip6')">Copy NIP</button><br>
+        <button onclick="copyText('pass6')">Copy Password</button>
+    </div>
+
+    <!-- CARD 7 -->
+    <div class="card">
+        <h3>ST</h3>
+        <span id="nip7" class="hidden">197707112007011026</span>
+        <span id="pass7" class="hidden">sutrisno</span>
+        <button onclick="copyText('nip7')">Copy NIP</button><br>
+        <button onclick="copyText('pass7')">Copy Password</button>
+    </div>
+
+    <!-- CARD 8 -->
+    <div class="card">
+        <h3>HJ</h3>
+        <span id="nip8" class="hidden">197206041994031004</span>
+        <span id="pass8" class="hidden">juanda</span>
+        <button onclick="copyText('nip8')">Copy NIP</button><br>
+        <button onclick="copyText('pass8')">Copy Password</button>
+    </div>
+
+</div>
+
+<script>
+function copyText(id) {
+    const text = document.getElementById(id).textContent;
+    navigator.clipboard.writeText(text);
+    alert("Data disalin: " + text);
+}
+</script>
+
 </body>
 </html>
